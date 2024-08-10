@@ -1,0 +1,62 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.home {
+  &__inner {
+    @include flexCenter();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      position: relative;
+
+      h1 {
+        margin-top: 40px;
+        font-size: 28px;
+        max-width: 558px;
+        color: #313131;
+        text-transform: capitalize;
+        z-index: 1;
+
+        .bordered {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 0;
+            height: 10px;
+            background: #e9a923;
+            border-radius: 21px;
+            animation: slideIn 1s forwards;
+            z-index: -1;
+          }
+        }
+
+        @keyframes slideIn {
+          from {
+            width: 0;
+          }
+          to {
+            width: 186px;
+          }
+        }
+      }
+    }
+    &-text {
+      max-width: 558px;
+      padding: 24px 0;
+
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
