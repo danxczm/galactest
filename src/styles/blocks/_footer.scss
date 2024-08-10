@@ -1,0 +1,106 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.footer {
+  padding: 64px 0 32px 0;
+  font-size: 16px;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    padding: 64px 0;
+  }
+
+  &__container {
+    @include flexCenter();
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin-bottom: 24px;
+  }
+
+  &__links {
+    margin-bottom: 28px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      gap: 46px;
+    }
+  }
+
+  &__link {
+    transition: color 0.1s linear;
+    font-weight: 400;
+    font-size: 14px;
+
+    @media (min-width: 640px) {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: $amber;
+    }
+  }
+
+  &__media {
+    @include flexCenter();
+    justify-content: center;
+    margin-bottom: 28px;
+    gap: 24px;
+
+    &-link {
+      @include flexCenter();
+      justify-content: center;
+      background: $plum;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      transition: background 0.1s linear;
+
+      & img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        background: $amber;
+      }
+
+      &--linkedin {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__contact {
+    &-title {
+      margin-bottom: 12px;
+      color: #313131;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &-email {
+      color: #585858;
+      font-size: 16px;
+
+      &:hover {
+        color: $amber;
+      }
+    }
+  }
+
+  @media (max-width: 630px) {
+    &__links-list {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
