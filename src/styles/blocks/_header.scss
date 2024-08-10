@@ -1,0 +1,71 @@
+@use '../base/variables' as *;
+
+.header__inner {
+  padding: 24px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image__logo {
+  width: 145.5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  width: 102px;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0.375rem;
+  color: white;
+  background-color: $plum;
+}
+
+.header__menu {
+  height: 76px;
+  display: flex;
+  justify-content: center;
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+  }
+
+  &-link {
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &::after {
+      position: absolute;
+      bottom: -5px;
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $amber;
+      transition: width 0.5s ease;
+    }
+
+    &.active {
+      color: $amber;
+    }
+
+    &:hover {
+      color: $amber;
+    }
+
+    &.active::after {
+      width: 100%;
+    }
+  }
+}

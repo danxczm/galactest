@@ -22,7 +22,7 @@ const Header = () => {
             </li>
             <li className="header__menu-item">
               <NavLink to="/about" className="header__menu-link">
-                About
+                About us
               </NavLink>
             </li>
             <li className="header__menu-item">
