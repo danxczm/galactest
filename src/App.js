@@ -1,23 +1,10 @@
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 
 const App = () => {
-  const buildLinkClass = ({ isActive }) => {
-    return { color: `${isActive ? 'green' : 'black'}` };
-  };
-
   return (
     <div>
-      <nav>
-        <NavLink to="/" style={buildLinkClass}>
-          Home
-        </NavLink>
-        <NavLink to="/about" style={buildLinkClass}>
-          About
-        </NavLink>
-        <NavLink to="/services" style={buildLinkClass}>
-          Services
-        </NavLink>
-      </nav>
+      <Header />
       <Routes>
         <Route
           path="/"

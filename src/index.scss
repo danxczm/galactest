@@ -13,6 +13,28 @@ body {
   color: #585858;
   font-size: 16px;
   font-weight: 600;
+
+  height: 100vh;
+
+  background: linear-gradient(
+    0.3turn,
+    rgba(234, 170, 36, 0.09),
+    rgba(127, 58, 106, 0.09),
+    rgba(223, 40, 106, 0.09),
+    rgba(235, 139, 39, 0.09),
+    rgba(255, 255, 255, 0.09)
+  );
+
+  @media (min-width: 768px) {
+    background: linear-gradient(
+      0.37turn,
+      rgba(127, 58, 106, 0.05),
+      rgba(223, 40, 106, 0.05),
+      rgba(255, 255, 255, 0.05),
+      rgba(233, 169, 35, 0.05),
+      rgba(235, 139, 39, 0.05)
+    );
+  }
 }
 
 h1,
