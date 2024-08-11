@@ -3,9 +3,14 @@
 
 .page {
   overflow: hidden;
-  max-height: 587px;
+  min-height: 597px;
+
+  @media (min-width: 1024px) {
+    height: 587px;
+  }
 
   &__wrapper {
+    margin-top: 42px;
     padding: 0 16px;
   }
 
