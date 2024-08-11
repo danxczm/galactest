@@ -1,0 +1,82 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.marquee-wrapper {
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.marquee {
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 135px;
+
+  @media (min-width: 768px) {
+    height: 188px;
+  }
+}
+
+.marquee__inner {
+  &-left {
+    @include marquee-style(rotate(5deg), 30s);
+
+    li {
+      left: max(calc(200px * 8), 100%);
+      animation-name: scrollLeft;
+    }
+  }
+
+  &-right {
+    @include marquee-style(rotate(-5deg), 30s);
+
+    li {
+      right: max(calc(200px * 8), calc(100% + 200px));
+      animation-name: scrollRight;
+    }
+  }
+}
+
+.item-1 {
+  animation-delay: calc(30s / 8 * 7 * -1);
+}
+.item-2 {
+  animation-delay: calc(30s / 8 * 6 * -1);
+}
+.item-3 {
+  animation-delay: calc(30s / 8 * 5 * -1);
+}
+.item-4 {
+  animation-delay: calc(30s / 8 * 4 * -1);
+}
+.item-5 {
+  animation-delay: calc(30s / 8 * 3 * -1);
+}
+.item-6 {
+  animation-delay: calc(30s / 8 * 2 * -1);
+}
+.item-7 {
+  animation-delay: calc(30s / 8 * 1 * -1);
+}
+.item-8 {
+  animation-delay: calc(30s / 8 * 0 * -1);
+}
+
+.marquee__inner-purple {
+  background: $plum;
+}
+
+.marquee__inner-golden {
+  background: $amber;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}

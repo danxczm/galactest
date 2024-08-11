@@ -2,3 +2,38 @@
   display: flex;
   align-items: center;
 }
+
+@mixin marquee-style($transform, $animation-duration) {
+  transform: $transform;
+  display: flex;
+  align-items: center;
+  height: 43px;
+
+  @media (min-width: 768px) {
+    height: 61px;
+  }
+
+  li {
+    position: absolute;
+    white-space: nowrap;
+    font-family: Exo, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    animation-duration: $animation-duration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  img {
+    width: 125px;
+
+    @media (min-width: 768px) {
+      width: 188px;
+    }
+  }
+}
