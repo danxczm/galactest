@@ -2,6 +2,8 @@
 @use '../base/mixins' as *;
 
 .home {
+  overflow: hidden;
+
   &__wrapper {
     padding: 0 16px;
   }
@@ -85,5 +87,144 @@
   }
   to {
     width: 100%;
+  }
+}
+
+// ---------------- //
+
+.marquee {
+  //   margin-top: 40px;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  height: 135px;
+
+  @media (min-width: 768px) {
+    height: 188px;
+  }
+}
+
+.marquee__inner {
+  outline: 3px solid red;
+
+  &-left {
+    transform: rotate(5deg);
+    display: flex;
+    align-items: center;
+    height: 43px;
+
+    @media (min-width: 768px) {
+      height: 61px;
+    }
+
+    > li {
+      position: absolute;
+      white-space: nowrap;
+      left: max(calc(200px * 8), 100%);
+      font-family: Exo, sans-serif;
+      font-size: 16px;
+
+      font-weight: bold;
+      color: white;
+
+      animation-name: scrollLeft;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      @media (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    img {
+      width: 125px;
+
+      @media (min-width: 768px) {
+        width: 188px;
+      }
+    }
+  }
+  &-right {
+    transform: rotate(-5deg);
+    display: flex;
+    align-items: center;
+    height: 43px;
+
+    @media (min-width: 768px) {
+      height: 61px;
+    }
+
+    > li {
+      position: absolute;
+      white-space: nowrap;
+      right: max(calc(200px * 8), calc(100% + 200px));
+      font-family: Exo, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+
+      animation-name: scrollRight;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      @media (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    img {
+      width: 125px;
+
+      @media (min-width: 768px) {
+        width: 188px;
+      }
+    }
+  }
+}
+
+.item-1 {
+  animation-delay: calc(30s / 8 * 7 * -1);
+}
+.item-2 {
+  animation-delay: calc(30s / 8 * 6 * -1);
+}
+.item-3 {
+  animation-delay: calc(30s / 8 * 5 * -1);
+}
+.item-4 {
+  animation-delay: calc(30s / 8 * 4 * -1);
+}
+.item-5 {
+  animation-delay: calc(30s / 8 * 3 * -1);
+}
+.item-6 {
+  animation-delay: calc(30s / 8 * 2 * -1);
+}
+.item-7 {
+  animation-delay: calc(30s / 8 * 1 * -1);
+}
+.item-8 {
+  animation-delay: calc(30s / 8 * 0 * -1);
+}
+
+.marquee__inner-purple {
+  background: $plum;
+}
+
+.marquee__inner-golden {
+  background: $amber;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: -200px;
   }
 }
