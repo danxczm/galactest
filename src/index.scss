@@ -61,7 +61,7 @@ ul {
 }
 
 .container {
-  max-width: 89.5%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -76,7 +76,8 @@ ul {
 
   @media (min-width: 768px) {
     background: linear-gradient(
-      rgba(127, 58, 106, 0.1),
+      rgba(255, 255, 255, 0.5),
+      rgba(127, 58, 106, 0.05),
       rgba(223, 40, 106, 0.05),
       rgba(255, 255, 255, 0.05),
       rgba(233, 169, 35, 0.03),
