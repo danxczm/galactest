@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Header from './components/Header';
@@ -17,7 +17,7 @@ const App = () => {
             <Route path="/" element={<Page />} />
             <Route path="/about" element={<Page />} />
             <Route path="/services" element={<Page />} />
-            <Route path="*" element={<>404</>} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </AnimatePresence>
       </div>
