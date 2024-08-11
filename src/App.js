@@ -1,28 +1,27 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
 import Header from './components/Header';
-import Home from './components/Home';
+import Page from './components/Page';
 import Footer from './components/Footer';
-import About from './components/About';
+import Marquee from './components/Marquee';
 
 const App = () => {
+  const location = useLocation();
   return (
     <>
       <div className="background">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route
-            path="/services"
-            element={
-              <>
-                <h1>Services</h1>
-              </>
-            }
-          />
-          <Route path="*" element={<>404</>} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes key={location.pathname} location={location}>
+            <Route path="/" element={<Page />} />
+            <Route path="/about" element={<Page />} />
+            <Route path="/services" element={<Page />} />
+            <Route path="*" element={<>404</>} />
+          </Routes>
+        </AnimatePresence>
       </div>
+      <Marquee />
       <Footer />
     </>
   );
