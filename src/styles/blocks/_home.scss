@@ -2,10 +2,28 @@
 @use '../base/mixins' as *;
 
 .home {
+  &__wrapper {
+    padding: 0 16px;
+  }
+
   &__inner {
+    max-width: 1141px;
     @include flexCenter();
-    justify-content: space-between;
+    justify-content: center;
+
     flex-wrap: wrap;
+
+    @media (min-width: 640px) {
+      margin: 0 auto;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &-info {
+      @media (min-width: 640px) {
+        margin-left: 50px;
+      }
+    }
 
     &-image {
       img {
@@ -23,31 +41,12 @@
         color: #313131;
         text-transform: capitalize;
         z-index: 1;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: hidden;
 
-        .bordered {
-          position: relative;
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            width: 0;
-            height: 10px;
-            background: #e9a923;
-            border-radius: 21px;
-            animation: slideIn 1s forwards;
-            z-index: -1;
-          }
-        }
-
-        @keyframes slideIn {
-          from {
-            width: 0;
-          }
-          to {
-            width: 186px;
-          }
+        @media (min-width: 1024px) {
+          font-size: 44px;
         }
       }
     }
@@ -58,5 +57,33 @@
       font-size: 16px;
       font-weight: 400;
     }
+  }
+}
+
+.bordered {
+  position: relative;
+  text-overflow: clip;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: #e9a923;
+    border-radius: 21px;
+    animation: slideIn 1s forwards;
+    z-index: -1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

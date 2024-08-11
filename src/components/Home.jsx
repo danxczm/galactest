@@ -3,7 +3,7 @@ import consulting from '../images/consulting.svg';
 const Home = () => {
   return (
     <main className="home">
-      <div className="container">
+      <div className="home__wrapper">
         <div className="home__inner">
           <div className="home__inner-image">
             <img src={consulting} alt="consulting" />
