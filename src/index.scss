@@ -1,7 +1,7 @@
 @import './styles/blocks/header';
-@import './styles/blocks/home';
-@import './styles/blocks/about';
+@import './styles/blocks/page';
 @import './styles/blocks/footer';
+@import './styles/blocks/marquee';
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
@@ -12,7 +12,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   background: #fdf8f3;
 }
 
@@ -20,10 +19,6 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: #585858;
-  font-size: 16px;
-  font-weight: 600;
-
-  height: 100vh;
 }
 
 h1,
@@ -41,15 +36,6 @@ h1 {
   font-weight: 600;
 }
 
-h2 {
-  color: #313131;
-  font-family: 'Exo', sans-serif;
-  font-size: 32px;
-  text-transform: capitalize;
-  position: relative;
-  z-index: 2;
-}
-
 a {
   color: #585858;
   text-decoration: none;
@@ -64,9 +50,8 @@ img {
   display: block;
 }
 
-.container {
-  max-width: 90%;
-  margin: 0 auto;
+address {
+  font-style: normal;
 }
 
 .background {

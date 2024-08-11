@@ -8,9 +8,11 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__logo">
-          <img src={logo} className="image__logo" alt="logo" loading="lazy" />
+          <h2>
+            <img src={logo} className="image__logo" alt="logo" loading="lazy" />
+          </h2>
         </div>
-        <div className="footer__links">
+        <nav className="footer__links" aria-label="Footer">
           <ul className="footer__list">
             <li className="footer__item">
               <a className="footer__link" href="/">
@@ -33,7 +35,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
         <div className="footer__media">
           <a href="https://facebook.com" className="footer__media-link">
             <img src={facebook} alt="Facebook" />
@@ -48,12 +50,12 @@ const Footer = () => {
             <img src={instagram} alt="Instagram" />
           </a>
         </div>
-        <div className="footer__contact">
+        <address className="footer__contact">
           <h3 className="footer__contact-title">Contact us</h3>
           <a className="footer__contact-email" href="mailto:support@markify.com">
             support@markify.com
           </a>
-        </div>
+        </address>
       </div>
     </footer>
   );
