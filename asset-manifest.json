@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/galactest/static/css/main.ef6ffc83.css",
+    "main.js": "/galactest/static/js/main.530a2143.js",
+    "static/media/leads.svg": "/galactest/static/media/leads.1ba9e3a8f60e71168d5e456eca35c16c.svg",
+    "static/media/consulting.svg": "/galactest/static/media/consulting.213d8fa7fdffdf252b56e1b4354c29d2.svg",
+    "static/media/deal.svg": "/galactest/static/media/deal.d2927e3f21d665d11e898cb675b6df11.svg",
+    "static/media/traffic.svg": "/galactest/static/media/traffic.19820de17922c92627f6747a244b90b9.svg",
+    "static/media/logo.svg": "/galactest/static/media/logo.41a3bb4ac45e1ebcebd4d74033eefb78.svg",
+    "static/media/instagram.svg": "/galactest/static/media/instagram.d9fc5530160b7a4e9cc0e912539f24f2.svg",
+    "static/media/linkedin.svg": "/galactest/static/media/linkedin.1adb0b1349035c73e7071051d1f02991.svg",
+    "index.html": "/galactest/index.html",
+    "static/media/facebook.svg": "/galactest/static/media/facebook.04bf4ed3361f771f451956ae56635964.svg",
+    "main.ef6ffc83.css.map": "/galactest/static/css/main.ef6ffc83.css.map",
+    "main.530a2143.js.map": "/galactest/static/js/main.530a2143.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef6ffc83.css",
+    "static/js/main.530a2143.js"
+  ]
+}
