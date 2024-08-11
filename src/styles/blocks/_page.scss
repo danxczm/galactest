@@ -1,0 +1,90 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.page {
+  overflow: hidden;
+
+  &__wrapper {
+    padding: 0 16px;
+  }
+
+  &__inner {
+    max-width: 1141px;
+    @include flexCenter();
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+      margin: 0 auto;
+      flex-wrap: nowrap;
+
+      justify-content: space-between;
+    }
+
+    &-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &-reverse {
+      flex-direction: row-reverse;
+    }
+
+    &-title {
+      position: relative;
+
+      h1 {
+        margin-top: 40px;
+        font-size: 28px;
+        max-width: 558px;
+        color: #313131;
+        text-transform: capitalize;
+        z-index: 1;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: hidden;
+
+        @media (min-width: 1024px) {
+          font-size: 44px;
+        }
+      }
+    }
+
+    &-text {
+      max-width: 558px;
+      padding: 24px 0;
+
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+.bordered {
+  position: relative;
+  text-overflow: clip;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: #e9a923;
+    border-radius: 21px;
+    animation: slideIn 1s forwards;
+    z-index: -1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
