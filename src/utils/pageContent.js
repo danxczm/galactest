@@ -1,5 +1,3 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 import consulting from '../images/consulting.svg';
 import deal from '../images/deal.svg';
 import leads from '../images/leads.svg';
@@ -9,7 +7,7 @@ const contentMap = {
     content: (
       <div className="page__inner">
         <div className="page__inner-image">
-          <LazyLoadImage src={consulting} alt="consulting" effect="opacity" delayTime={500} />
+          <img src={consulting} alt="consulting" />
         </div>
         <div className="page__inner-info">
           <div className="page__inner-title">
@@ -32,7 +30,7 @@ const contentMap = {
     content: (
       <div className="page__inner">
         <div className="page__inner-image">
-          <LazyLoadImage src={deal} alt="deal" effect="opacity" delayTime={500} />
+          <img src={deal} alt="deal" />
         </div>
         <div className="page__inner-info">
           <div className="page__inner-title">
@@ -54,7 +52,7 @@ const contentMap = {
     content: (
       <div className="page__inner page__inner-reverse">
         <div className="page__inner-image">
-          <LazyLoadImage src={leads} alt="leads" effect="opacity" delayTime={500} />
+          <img src={leads} alt="leads" />
         </div>
         <div className="page__inner-info">
           <div className="page__inner-title">
