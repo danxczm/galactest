@@ -10,7 +10,10 @@
   }
 
   &__wrapper {
-    margin-top: 42px;
+    @media (min-width: 768px) {
+      margin-top: 42px;
+    }
+
     padding: 0 16px;
   }
 
