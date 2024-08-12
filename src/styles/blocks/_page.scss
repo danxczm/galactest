@@ -28,6 +28,12 @@
     }
 
     &-image {
+      width: 285px;
+
+      @media (min-width: 768px) {
+        width: 461px;
+      }
+
       img {
         width: 100%;
       }
