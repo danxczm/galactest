@@ -9,7 +9,7 @@ const contentMap = {
     content: (
       <div className="page__inner">
         <div className="page__inner-image">
-          <LazyLoadImage src={consulting} alt="consulting" effect="blur" />
+          <LazyLoadImage src={consulting} alt="consulting" effect="opacity" delayTime={500} />
         </div>
         <div className="page__inner-info">
           <div className="page__inner-title">
@@ -32,7 +32,7 @@ const contentMap = {
     content: (
       <div className="page__inner">
         <div className="page__inner-image">
-          <LazyLoadImage src={deal} alt="deal" effect="blur" />
+          <LazyLoadImage src={deal} alt="deal" effect="opacity" delayTime={500} />
         </div>
         <div className="page__inner-info">
           <div className="page__inner-title">
@@ -54,7 +54,7 @@ const contentMap = {
     content: (
       <div className="page__inner page__inner-reverse">
         <div className="page__inner-image">
-          <LazyLoadImage src={leads} alt="leads" effect="blur" />
+          <LazyLoadImage src={leads} alt="leads" effect="opacity" delayTime={500} />
         </div>
         <div className="page__inner-info">
           <div className="page__inner-title">
